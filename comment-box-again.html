@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+
+<body>
+    <h1>Add Comment Plz</h1>
+    <div id="c-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eos corrupti deleniti, corporis quidem,
+            consequuntur et eligendi cumque harum autem repudiandae cum. Ad expedita impedit perspiciatis laborum quae
+            deserunt possimus eum, minima eaque odio totam natus quis quod error corrupti dolorem odit velit distinctio
+            veniam iure commodi ipsum debitis porro.</p>
+        <p>Voluptatibus recusandae odit velit dolor! Magnam earum exercitationem illum recusandae, non magni deserunt
+            aliquam explicabo sit alias at deleniti ducimus veniam asperiores molestias quos sed. Ratione numquam fugit
+            iste modi obcaecati nam, eaque explicabo itaque optio sit aperiam illum aspernatur consequuntur ullam est
+            officiis qui nihil quidem omnis illo debitis!</p>
+        <p>Fugit quos nam consequuntur incidunt accusamus nobis quae facilis molestiae ipsam. Voluptatem quisquam, quos
+            aut soluta minus neque incidunt dolor veritatis laboriosam placeat pariatur repellendus corrupti illum
+            voluptatibus modi voluptate? At consequuntur ea, voluptatibus similique est magni iste cum maiores harum,
+            inventore distinctio, quisquam nobis doloribus magnam praesentium facere. Adipisci.</p>
+    </div>
+    <div>
+        <textarea name="" id="n-comment" cols="60" rows="5"></textarea>
+        <br>
+        <button id="c-btn">Comment</button>
+    </div>
+
+    <script>
+        document.getElementById('c-btn').addEventListener('click', function () {
+
+            const cBox = document.getElementById('n-comment');
+            const nComment = cBox.value;
+
+            const cContainer = document.getElementById('c-container');
+            const p = document.createElement('p');
+            p.innerText = nComment;
+            cContainer.appendChild(p);
+
+            cBox.value = '';
+
+        })
+    </script>
+</body>
+
+</html>
